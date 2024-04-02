@@ -1,3 +1,9 @@
+import posixpath 
+import os.path
+import tkinter as tk
+import tkinter.font as tkFont
+
+
 '''
 20240328
 #try & except
@@ -136,7 +142,6 @@ def read_n_write():                         #write lyric into a file"#poetry.txt
     except FileNotFoundError as F:
         print('File not found, 錯誤原因:', F)
 read_n_write()
-'''
 
 #3
 file_name = str(input('file name:'))
@@ -152,16 +157,34 @@ def read_n_write(file_name):                         #write lyric into a file"#p
         else:
             break
 
-    a.seek(0)                           #move the pointer position
+    a.seek(0)                           #move the pointer position to begining
+    file = os.path.abspath(file_name)
+    print(os.path.basename(file))          #testing directory operation command
+    print(os.path.dirname(file))
+    print(os.path.exists(file))
+    print(os.path.getsize(file))
+    print(os.path.isabs(file))
+    print(os.path.isfile(file))
+    print(os.path.isdir(file))
+    a.write(file)                      #testing directory operation command
+    a.write(os.path.basename(file) + "\n")          #testing directory operation command
+    a.write(os.path.dirname(file)+ "\n")
+    a.write(str(os.path.exists(file))+ "\n")
+    a.write(str(os.path.getsize(file))+ "\n")
+    a.write(str(os.path.isabs(file))+ "\n")
+    a.write(str(os.path.isfile(file))+ "\n")
+    a.write(str(os.path.isdir(file))+ "\n")
+
+
+        
     print(a.readlines())                #read the whole file
     print(a.tell())                     #check the pointer position
     a.close
 read_n_write(file_name)
-'''
+
 
 
 #20240330
-import posixpath 
 
 #1
 filename = str(input())
@@ -187,11 +210,12 @@ def gen_directory(filename):                # directory checking
 
 gen_directory(filename)
 
+'''
 #2
 filename = str(input("filename"))
 
 def creat_file_n_write_file_data(filename):  # duplicate  with #1 
-    a = posixpath.abspath(filename)          # how to mix 2 def object into 1 ?? 
+    a = posixpath.abspath(filename)          
     b = posixpath.dirname(a)
     c = posixpath.basename(a)
     d = posixpath.getsize(filename)
@@ -231,9 +255,8 @@ def write(filename):                         #1.create a file   2.write a poetry
 print(creat_file_n_write_file_data(filename))
 write(filename)
 
+'''
 #3    
-import tkinter as tk
-import tkinter.font as tkFont
 
 class App:
     def __init__(self, root):

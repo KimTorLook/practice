@@ -1,4 +1,11 @@
 #靜夜思   
 #床前明月光，疑是地上霜。
 #舉頭望明月，低頭思故鄉。
-745
+0443
+C:\Users\Jacky\Documents\Practice\poetry.txtpoetry.txt
+C:\Users\Jacky\Documents\Practice
+True
+99
+True
+True
+False
