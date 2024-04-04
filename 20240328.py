@@ -210,7 +210,6 @@ def gen_directory(filename):                # directory checking
 
 gen_directory(filename)
 
-'''
 #2
 filename = str(input("filename"))
 
@@ -225,7 +224,7 @@ def creat_file_n_write_file_data(filename):  # duplicate  with #1
     h = posixpath.isdir(b)
     return a,b,c,d,e,f,g,h
 
-def write(filename):                         #1.create a file   2.write a poetry and directory to the file   3.write a directory/path to the file
+def write_something(filename):                         # 1.create a file   2.write a poetry and directory to the file   3.write a directory/path to the file
 
     file = open(filename, "w")
     content = str(input('please input you content.: '))    
@@ -253,10 +252,10 @@ def write(filename):                         #1.create a file   2.write a poetry
         file.write("\n")
     
 print(creat_file_n_write_file_data(filename))
-write(filename)
-
+write_something(filename)
 '''
-#3    
+
+#3  xxx
 
 class App:
     def __init__(self, root):
@@ -272,10 +271,10 @@ class App:
         root.resizable(width=False, height=False)
         num1=tk.DoubleVar()
         num2=tk.DoubleVar()
-        result=tk.DoubleVar()
+        self.result=tk.DoubleVar()
         self.num1 = num1
         self.num2 = num2
-        self.result = result.set(num1.get() + num2.get() - num2.get())
+
 
         GLineEdit_791=tk.Entry(root)
         GLineEdit_791["bg"] = "#ffffff"
@@ -320,13 +319,14 @@ class App:
         GLabel_959["font"] = ft
         GLabel_959["fg"] = "#333333"
         GLabel_959["justify"] = "center"
-        GLabel_959["textvariable"] = result
+        GLabel_959["textvariable"] = self.result
         GLabel_959.place(x=360,y=70,width=70,height=25)
         return
 
 # XXX
-    def GButton_522_command(self,result, num1, num2):   
-        print(result = num1.get() + num2.get())
+    def GButton_522_command(self):   
+        self.result.set(self.num1.get() + self.num2.get())
+
 
 
 
@@ -335,4 +335,5 @@ if __name__ == "__main__":
     app = App(root)
     root.mainloop()
 
-'''
+
+

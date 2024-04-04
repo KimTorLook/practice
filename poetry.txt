@@ -1,11 +1,12 @@
-#éœå¤œæ€   
-#åºŠå‰æ˜æœˆå…‰ï¼Œç–‘æ˜¯åœ°ä¸Šéœœã€‚
-#èˆ‰é ­æœ›æ˜æœˆï¼Œä½é ­æ€æ•…é„‰ã€‚
-0443
-C:\Users\Jacky\Documents\Practice\poetry.txtpoetry.txt
-C:\Users\Jacky\Documents\Practice
-True
-99
-True
+#ÀR©]«ä
+#§É«e©ú¤ë¥ú¡AºÃ¬O¦a¤WÁ÷¡C
+#Á|ÀY±æ©ú¤ë¡A§CÀY«ä¬G¶m¡C
+1907
+C:\Users\lokwa\OneDrive\¤å¥ó\Python\git\Practice/poetry.txt
+C:\Users\lokwa\OneDrive\¤å¥ó\Python\git\Practice
+poetry.txt
+0
 True
 False
+True
+True
