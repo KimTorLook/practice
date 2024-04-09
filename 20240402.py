@@ -26,6 +26,9 @@ def guestNum():
 guestNum()
 
 
+
+
+
 #2 class 
 
 class guestNum:
@@ -51,6 +54,9 @@ class guestNum:
 a = guestNum()
 print(9)
 a.guestNum()
+
+
+
 
 #20240404 expand form 20240402 #1
 
@@ -113,6 +119,8 @@ a.guestNum()
 
 
 
+
+
 #3 expand form #1  making class 
 
 class gaming:
@@ -144,6 +152,10 @@ class gaming:
 a=gaming()    
 a.num_process()
 a.matching()
+
+
+
+
 
 
 
@@ -182,6 +194,10 @@ hondaJazz = GV('50', '200')
 print(talsaModelS())
 
 
+
+
+
+
 20240405
 
 #1
@@ -215,34 +231,3 @@ Velkhana.swimming('swim')
 '''
 
 
-conn = sqlite3.connect('Jewelry.db')
-
-cursor = conn.cursor()
-
-'''def query_str(**kwarg):
-    a = input("key1,value1,key2,value2,key3,value3,key4,value4,key5,value5,key6,value6,key7,value7,")
-    table_name = input("table_name")
-    for key, value in kwarg.item():
-        pass
-
-while s == 0:
-    if s ==1:
-        cursor.execute("INSERT INTO ")
-    elif S == 2:
-        select
-        cursor.execute('SELECT * FROM `Jewelry`')
-    elif s == 3:
-        update
-    elif s == 4:
-        delete
-    else: 
-        break
-
-    s = input()
-'''
-
-cursor.execute('SELECT * FROM `Jewelry`')
-records = cursor.fetchall()
-print(records)
-cursor.close()
-conn.close
