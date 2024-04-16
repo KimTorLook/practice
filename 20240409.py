@@ -1,7 +1,7 @@
 import logging
 import numbers  
 
-'''
+
 #1
 def state():
     arg = 0
@@ -20,7 +20,7 @@ def state():
             print("unknow")
 
 
-state()
+#state()
 
 
 
@@ -44,7 +44,7 @@ def state2():
         elif question != arg.keys():
             print("unknow")
 
-state2()
+#state2()
 
 
 
@@ -54,18 +54,6 @@ state2()
 
 
 
-
-
-
-#classmate output
-
-eng = [0, "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"]
-u = eng[:10]
-x = input('pls input a no.')
-while x != 'exit':
-    y = int(x)
-    print(u[y])
-    x = input('pls input a no.')
 
 
 
@@ -110,9 +98,46 @@ def creditors_payment_period(trade_payables, purchase):
 def sales_to_capital_employed(sales, Capital):
     return sales/ Capital
 
-#accounting_figure{10000:"Assets", 11000:"Current Assets",  41100:"Sales", 51000:"opening_stock", 52000:"purchase", 54000:"closing_stock" ]
-
-'''
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from data_chart_of_acc import account_list
+
+def auto_input():
+    a = len(account_list)
+    for x in a:
+
+
+
+    while True:
+        input_account_num = input("account num:")
+
+        if input_account_num.lower() == "done":
+            break
+        elif input_account_num.lower() == "delete":
+            input_delete = input("delete account #:")
+            del account_list[input_delete]
+            print(f"deleted account:{input_delete}")
+            continue
+        else:  
+            input_account_name = str(input("account name:"))
+            account_list[input_account_num] = input_account_name
+    print("=== program close! ===")
+    print(account_list)
+
+a = auto_input()
 
