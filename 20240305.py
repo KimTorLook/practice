@@ -61,13 +61,6 @@ a=sum
 print(a(1,2,3))
 
 """
-def main() -> None:
-    sum()
-    multiply()
-
-
-if __name__ == '__main__':
-    sum()
 
 #20240306
 def out_func(f):
@@ -87,3 +80,12 @@ a=out_func
 print(a)
 print(a(unknow))
 print(a(unknow)())
+
+
+def main() -> None:
+    sum()
+    multiply()
+
+
+if __name__ == '__main__':
+    sum()

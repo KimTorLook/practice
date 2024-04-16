@@ -1,6 +1,6 @@
 import random
 import sqlite3
-'''
+
 #1  guest Num 1~ 6 
 
 
@@ -228,6 +228,6 @@ Nergigante = monster(4,True,False,True,False)
 
 Velkhana.swimming('swim')
 
-'''
+
 
 

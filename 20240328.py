@@ -4,7 +4,7 @@ import tkinter as tk
 import tkinter.font as tkFont
 
 
-'''
+
 20240328
 #try & except
 #1
@@ -253,7 +253,7 @@ def write_something(filename):                         # 1.create a file   2.wri
     
 print(creat_file_n_write_file_data(filename))
 write_something(filename)
-'''
+
 
 #3  xxx
 

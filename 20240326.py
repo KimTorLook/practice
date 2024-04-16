@@ -13,12 +13,15 @@ def GenRamdomNum() -> list:
 
 print(GenRamdomNum())
 
-'''
-#2
+
+
+
+
+#2  Gen two random nums by using a list
 import random
 answer = []
 
-def GenRamdomNum() -> list:
+def GenRamdomNum() -> list:  
     Num1 = 0
 
     for x in range(1,3):
@@ -31,6 +34,12 @@ def GenRamdomNum() -> list:
 print(f"the first Num:{answer[0]} and the second Num:{answer[1]}")
 print(f"{answer[0]} + {answer[1]} = {answer[0] + answer[1]}")
 
+
+
+
+
+
+#3  Gen two random nums by using a list, sum of these and ask for the answer.
 import random
 answer = []
 def GenRamdomNum() -> list:
@@ -53,6 +62,12 @@ GenRamdomNum()
 JudgeSys()
 
 
+
+
+
+
+
+
 def main() -> None:
     GenRamdomNum()
     JudgeSys()
@@ -62,4 +77,3 @@ if __name__ == '__main__':
     GenRamdomNum()
     JudgeSys()
 
-'''
