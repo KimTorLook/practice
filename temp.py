@@ -1,4 +1,4 @@
-'''
+""" """ 
 #20240331  matplotlib
 import matplotlib.pyplot as plt
 import tkinter as tk
@@ -29,7 +29,7 @@ def draw_area(plot_para):
     #win.mainloop()
 
 draw_area(plot_para)
-'''
+
 ###################################
 amplitude= float(input("amplitude:"))
 time     = float(input("time: "))            # unit : second
@@ -76,7 +76,7 @@ print(wavelength(time,times))
 print(wave_period(time,times,f))
 print(wave_speed(distance,time,))
 #print(speed_n_period_corelation(distance,time,f,T))
-'''
+
 
 time = float(input("time: "))            # unit : second
 times = int(input("times: "))            # Num of wave  
@@ -122,13 +122,13 @@ print(f"Speed using frequency and period: {speed_n_period_corelation(distance, t
 
 
 
-'''
+
 
 conn = sqlite3.connect('Jewelry.db')
 
 cursor = conn.cursor()
 
-'''def query_str(**kwarg):
+def query_str(**kwarg):
     a = input("key1,value1,key2,value2,key3,value3,key4,value4,key5,value5,key6,value6,key7,value7,")
     table_name = input("table_name")
     for key, value in kwarg.item():
@@ -148,10 +148,83 @@ while s == 0:
         break
 
     s = input()
-'''
 
 cursor.execute('SELECT * FROM `Jewelry`')
 records = cursor.fetchall()
 print(records)
 cursor.close()
 conn.close
+
+import requests
+
+class caesar_encrypt():
+    def __init__(self):
+        lower = "abcdefghijklmnopqrstuvwxyz"
+        upper = lower.upper()
+        self.lower = lower
+        self.upper = upper
+
+    def storeAndEncrypt(self,statement):
+        message = list(statement)
+        encrypted = []
+        for loop in message:
+            if loop.islower():        
+                a = self.lower.index(loop)
+                if a >= 23 :
+                    print(self.lower[a+3-26])
+                    encrypted.append(a)
+                else:
+                    print(self.lower[a+3])
+                    encrypted.append(a)
+            else:
+                a = self.upper.index(loop)
+                if a >= 23 :
+                    print(self.upper[a+3-26])
+                    encrypted.append(a)
+                else:
+                    print(self.upper[a+3])
+                    encrypted.append(a)
+        return encrypted
+
+    def mainLoop(self, encrypted):
+        statement = input(("input a message: "))
+        
+        while True:
+            if statement.lower == "exit":
+                print('---programme closed---')
+                break
+            self.storeAndEncrypt(statement)
+            print(encrypted)
+
+a=caesar_encrypt()
+caesar_encrypt.mainLoop(a)
+
+
+class CaesarEncrypt:
+    def __init__(self):
+        self.lower = "abcdefghijklmnopqrstuvwxyz"
+        self.upper = self.lower.upper()
+
+    def encrypt(self, chars, shift=3):
+        encrypted_message = ""
+        for char in chars:
+            if char.isalpha():
+                alphabet = self.lower if char.islower() else self.upper
+                new_position = (alphabet.index(char) + shift) % 26
+                encrypted_message += alphabet[new_position]
+            else:
+                encrypted_message += char
+        return encrypted_message
+
+    def main_loop(self):
+        while True:
+            chars = input("Input a message (type 'exit' to quit): ")
+            if chars.lower() == 'exit':
+                print('---programme closed---')
+                break
+            encrypted = self.encrypt(chars)
+            print("Encrypted message:", encrypted)
+
+# Create an instance of the CaesarEncrypt class
+cipher = CaesarEncrypt()
+cipher.main_loop()

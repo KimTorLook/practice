@@ -224,7 +224,7 @@ def creat_file_n_write_file_data(filename):  # duplicate  with #1
     h = posixpath.isdir(b)
     return a,b,c,d,e,f,g,h
 
-def write_something(filename):                         # 1.create a file   2.write a poetry and directory to the file   3.write a directory/path to the file
+def write_something(filename):                         # 1.create a file   2.write a poetry to the file   3.write a directory/path to a log 
 
     file = open(filename, "w")
     content = str(input('please input you content.: '))    
@@ -327,13 +327,7 @@ class App:
     def GButton_522_command(self):   
         self.result.set(self.num1.get() + self.num2.get())
 
-
-
-
 if __name__ == "__main__":
     root = tk.Tk()
     app = App(root)
     root.mainloop()
-
-
-

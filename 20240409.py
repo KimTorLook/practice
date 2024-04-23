@@ -56,9 +56,19 @@ def state2():
 
 
 
+#3 using class
+class main:
+    def state2():
+        arg = {"1":"one","2":"two","3":"three"}
+        question = "0"
+        while question != "exit":
+            question = str(input())
+            if question in arg.keys():
+                print(arg[question])
+            elif question != arg.keys():
+                print("unknow")
 
-
-
+main.state2()
 
 
 20240415
@@ -114,7 +124,7 @@ def sales_to_capital_employed(sales, Capital):
 
 
 
-
+'''
 from data_chart_of_acc import account_list
 
 def auto_input():
@@ -123,7 +133,8 @@ def auto_input():
 
 
 
-    while True:
+
+while True:
         input_account_num = input("account num:")
 
         if input_account_num.lower() == "done":
@@ -138,6 +149,6 @@ def auto_input():
             account_list[input_account_num] = input_account_name
     print("=== program close! ===")
     print(account_list)
-
-a = auto_input()
+'''
+#a = auto_input()
 
