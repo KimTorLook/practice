@@ -8,7 +8,7 @@ def acc_password():
 
 #1
 
-ASCII Table
+
 +3 +4
 Mod
 
