@@ -8,11 +8,6 @@ def acc_password():
 
 #1
 
-
-+3 +4
-Mod
-
-
 def caesar_encrypt():
     lower = "abcdefghijklmnopqrstuvwxyz"
     upper = lower.upper()
