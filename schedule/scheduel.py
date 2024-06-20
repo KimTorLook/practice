@@ -1,5 +1,3 @@
-
-
 import datetime as dt
 from datetime import timedelta
 
@@ -11,4 +9,4 @@ def timeschudule():
         start_day += timedelta(days=1)
 
 
-ts = timeschudule()
+ts = timeschudule() #暫時得個format
